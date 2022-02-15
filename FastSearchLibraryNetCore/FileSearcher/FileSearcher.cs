@@ -382,6 +382,10 @@ namespace FastSearchLibrary
             {
                 return new List<FileInfo>();
             }
+            catch (Exception ex)
+            {
+                return new List<FileInfo>();
+            }
 
             List<FileInfo> result = new List<FileInfo>();
 
@@ -401,6 +405,9 @@ namespace FastSearchLibrary
             {
             }
             catch (DirectoryNotFoundException ex)
+            {
+            }
+            catch (Exception ex)
             {
             }
 
@@ -451,6 +458,10 @@ namespace FastSearchLibrary
             {
                 return new List<FileInfo>();
             }
+            catch (Exception ex)
+            {
+                return new List<FileInfo>();
+            }
 
             foreach (var d in directories)
             {
@@ -472,6 +483,9 @@ namespace FastSearchLibrary
             {
             }
             catch (DirectoryNotFoundException ex)
+            {
+            }
+            catch (Exception ex)
             {
             }
 
@@ -638,6 +652,10 @@ namespace FastSearchLibrary
             {
                 return new List<DirectoryInfo>();
             }
+            catch (Exception ex)
+            {
+                return new List<DirectoryInfo>();
+            }
 
             return GetStartDirectories(directories[0].FullName, files, pattern);
         }
@@ -675,6 +693,10 @@ namespace FastSearchLibrary
                 return new List<DirectoryInfo>();
             }
             catch (DirectoryNotFoundException ex)
+            {
+                return new List<DirectoryInfo>();
+            }
+            catch (Exception ex)
             {
                 return new List<DirectoryInfo>();
             }

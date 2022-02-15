@@ -44,12 +44,14 @@ namespace FastSearchLibrary
 
         protected override void OnFilesFound(List<FileInfo> files)
         {
-            var arg = new FileEventArgs(files);
-
             if (handlerOption == ExecuteHandlers.InNewTask)
+            {
                 taskHandlers.Add(Task.Run(() => CallFilesFound(files), token));
+            }         
             else
+            {
                 CallFilesFound(files);
+            }            
         }
 
 

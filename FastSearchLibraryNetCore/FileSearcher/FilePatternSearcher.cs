@@ -67,6 +67,10 @@ namespace FastSearchLibrary
             {
                 return;
             }
+            catch (Exception ex)
+            {
+                return;
+            }
 
             foreach (var d in directories)
             {
@@ -86,6 +90,9 @@ namespace FastSearchLibrary
             {
             }
             catch (DirectoryNotFoundException ex)
+            {
+            }
+            catch (Exception ex)
             {
             }
         }
@@ -120,6 +127,10 @@ namespace FastSearchLibrary
                 return new List<DirectoryInfo>();
             }
             catch (DirectoryNotFoundException ex)
+            {
+                return new List<DirectoryInfo>();
+            }
+            catch (Exception ex)
             {
                 return new List<DirectoryInfo>();
             }
