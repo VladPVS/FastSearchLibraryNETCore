@@ -336,9 +336,9 @@ Therefore, it's better to keep all your lambdas and event handlers as simple as 
 Example:
 
 ````csharp
-    var fileTextSearcher = new FileTextSearcher1(
+    var fileTextSearcher = new FileTextSearcher(
         new [] { @"C:\" },
         f => f.CreationTime > new DateTime(2022, 5, 1)
           && f.Extension.Equals(".txt", StringComparison.OrdinalIgnoreCase),
-        t => { return Regex.IsMatch(t, $".*(first|second) search expression.*", RegexOptions.Compiled); }); 
+        t => Regex.IsMatch(t, $".*(first|second|third) search expression.*", RegexOptions.Compiled));  
 ````
