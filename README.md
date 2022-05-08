@@ -239,7 +239,7 @@ Task<List<FileInfo>> task = FileSearcher.GetFilesFastAsync(@"D:\", (f) =>
   or enumeration of searhing expressions
   * Encoding of text files
   * Value of StringComparison enum that determines how to compare searching expressions.
-  Applyiable only to those method overloads that accept enumeration of searhing expressions
+  Applyiable only to those method overloads that accept enumeration of searching expressions
   instead of delegate.   
 
   The difference between these method is represented by next example.
