@@ -3,8 +3,8 @@
   <PropertyGroup>
 	  <TargetFramework>netcoreapp3.1</TargetFramework>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
-	  <AssemblyVersion>2.0.0.0</AssemblyVersion>
-	  <FileVersion>2.0.0.0</FileVersion>
+	  <AssemblyVersion>1.0.0.0</AssemblyVersion>
+	  <FileVersion>1.0.0.0</FileVersion>
 	  <Description>The multithreading .NET library that provides opportunity to fast find files or directories using different search criteria.</Description>
   </PropertyGroup>
 
