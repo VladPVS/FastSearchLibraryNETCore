@@ -1,3 +1,13 @@
+## Attention!
+
+We have been in state of war with Russia since February 24th.
+To help Ukraine achieve victory as soon as possible, please, ignore all russian products, companies, projects... Everything.
+
+Also you may help Armed Forces of Ukraine here: https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi
+
+We will release our Motherland from russian invaders and save Europe from aggressive inhuman russian regime. I promise.
+#### Glory to Ukraine!
+
 # FastSearchLibrary (.NET Core)
 The multithreading library that provides opportunity both to fast find files or directories using different search criteria and search text files by its content.
 
