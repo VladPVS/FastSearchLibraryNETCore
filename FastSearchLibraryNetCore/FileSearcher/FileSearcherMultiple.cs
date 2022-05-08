@@ -36,7 +36,7 @@ namespace FastSearchLibrary
 
 
         /// <summary>
-        /// Event fires when search process is completed or stopped.
+        /// Event fires when search process is completed or canceled.
         /// </summary>
         public event EventHandler<SearchCompletedEventArgs> SearchCompleted;
 

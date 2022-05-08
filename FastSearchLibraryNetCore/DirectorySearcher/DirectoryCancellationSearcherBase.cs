@@ -92,7 +92,7 @@ namespace FastSearchLibrary
         {
             try
             {
-                GetDirectoriesFast();
+                SearchDirectoriesFast();
             }
             catch (OperationCanceledException ex)
             {
@@ -109,7 +109,7 @@ namespace FastSearchLibrary
 
 
     
-        protected virtual void GetDirectoriesFast()
+        protected virtual void SearchDirectoriesFast()
         {
             List<DirectoryInfo> startDirs = GetStartDirectories(folder);
 
@@ -117,13 +117,13 @@ namespace FastSearchLibrary
             {
                 GetStartDirectories(d.FullName).AsParallel().WithCancellation(token).ForAll((dir) =>
                 {
-                    GetDirectories(dir.FullName);
+                    SearchDirectories(dir.FullName);
                 });
             });
         }
 
 
-        protected abstract void GetDirectories(string folder);
+        protected abstract void SearchDirectories(string folder);
 
         protected abstract List<DirectoryInfo> GetStartDirectories(string folder);
 

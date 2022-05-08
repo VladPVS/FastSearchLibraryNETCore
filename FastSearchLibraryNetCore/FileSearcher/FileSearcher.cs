@@ -362,7 +362,7 @@ namespace FastSearchLibrary
         /// <returns>List of finding files</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        static public List<FileInfo> GetFiles(string folder, string pattern = "*")
+        public static List<FileInfo> GetFiles(string folder, string pattern = "*")
         {
             DirectoryInfo dirInfo = null;
             DirectoryInfo[] directories = null;
@@ -421,10 +421,10 @@ namespace FastSearchLibrary
         /// </summary>
         /// <param name="folder">The start search directory.</param>
         /// <param name="isValid">The delegate that determines algorithm of file selection.</param>
-        /// <returns>List of finding files.</returns>
+        /// <returns>List of found files.</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        static public List<FileInfo> GetFiles(string folder, Func<FileInfo, bool> isValid)
+        public static List<FileInfo> GetFiles(string folder, Func<FileInfo, bool> isValid)
         {
             DirectoryInfo dirInfo = null;
             DirectoryInfo[] directories = null;
@@ -499,9 +499,10 @@ namespace FastSearchLibrary
         /// </summary>
         /// <param name="folder">The start search directory.</param>
         /// <param name="pattern">The search pattern.</param>
+        /// <returns>List of found files.</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        static public Task<List<FileInfo>> GetFilesAsync(string folder, string pattern = "*")
+        public static Task<List<FileInfo>> GetFilesAsync(string folder, string pattern = "*")
         {
             return Task.Run<List<FileInfo>>(() =>
             {
@@ -516,9 +517,10 @@ namespace FastSearchLibrary
         /// </summary>
         /// <param name="folder">The start search directory.</param>
         /// <param name="isValid">The delegate that determines algorithm of file selection.</param>
+        /// <returns>List of found files.</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        static public Task<List<FileInfo>> GetFilesAsync(string folder, Func<FileInfo, bool> isValid)
+        public static Task<List<FileInfo>> GetFilesAsync(string folder, Func<FileInfo, bool> isValid)
         {
             return Task.Run<List<FileInfo>>(() =>
             {
@@ -533,10 +535,10 @@ namespace FastSearchLibrary
         /// </summary>
         /// <param name="folder">The start search directory.</param>
         /// <param name="pattern">The search pattern.</param>
-        /// <returns>List of finding files.</returns>
+        /// <returns>List of found files.</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        static public List<FileInfo> GetFilesFast(string folder, string pattern = "*")
+        public static List<FileInfo> GetFilesFast(string folder, string pattern = "*")
         {
             ConcurrentBag<FileInfo> files = new ConcurrentBag<FileInfo>();
 
@@ -560,10 +562,10 @@ namespace FastSearchLibrary
         /// </summary>
         /// <param name="folder">The start search directory.</param>
         /// <param name="isValid">The delegate that determines algorithm of file selection.</param>
-        /// <returns>List of finding files.</returns>
+        /// <returns>List of found files.</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        static public List<FileInfo> GetFilesFast(string folder, Func<FileInfo, bool> isValid)
+        public static List<FileInfo> GetFilesFast(string folder, Func<FileInfo, bool> isValid)
         {
             ConcurrentBag<FileInfo> files = new ConcurrentBag<FileInfo>();
 
@@ -587,9 +589,10 @@ namespace FastSearchLibrary
         /// </summary>
         /// <param name="folder">The start search directory.</param>
         /// <param name="pattern">The search pattern.</param>
+        /// <returns>List of found files.</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        static public Task<List<FileInfo>> GetFilesFastAsync(string folder, string pattern = "*")
+        public static Task<List<FileInfo>> GetFilesFastAsync(string folder, string pattern = "*")
         {
             return Task.Run<List<FileInfo>>(() =>
             {
@@ -604,9 +607,10 @@ namespace FastSearchLibrary
         /// </summary>
         /// <param name="folder">The start search directory.</param>
         /// <param name="isValid">The delegate that determines algorithm of file selection.</param>
+        /// <returns>List of found files.</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        static public Task<List<FileInfo>> GetFilesFastAsync(string folder, Func<FileInfo, bool> isValid)
+        public static Task<List<FileInfo>> GetFilesFastAsync(string folder, Func<FileInfo, bool> isValid)
         {
             return Task.Run<List<FileInfo>>(() =>
             {
@@ -619,7 +623,7 @@ namespace FastSearchLibrary
 
         #region Private members
 
-        static private List<DirectoryInfo> GetStartDirectories(string folder, ConcurrentBag<FileInfo> files, string pattern)
+        private static List<DirectoryInfo> GetStartDirectories(string folder, ConcurrentBag<FileInfo> files, string pattern)
         {
             DirectoryInfo dirInfo = null;
             DirectoryInfo[] directories = null;
@@ -662,7 +666,7 @@ namespace FastSearchLibrary
 
 
 
-        static private List<DirectoryInfo> GetStartDirectories(string folder, ConcurrentBag<FileInfo> resultFiles, Func<FileInfo, bool> isValid)
+        private static List<DirectoryInfo> GetStartDirectories(string folder, ConcurrentBag<FileInfo> resultFiles, Func<FileInfo, bool> isValid)
         {
             DirectoryInfo dirInfo = null;
             DirectoryInfo[] directories = null;

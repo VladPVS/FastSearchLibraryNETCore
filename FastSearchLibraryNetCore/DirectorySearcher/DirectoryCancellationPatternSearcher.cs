@@ -18,7 +18,7 @@ namespace FastSearchLibrary
         }
 
 
-        protected override void GetDirectories(string folder)
+        protected override void SearchDirectories(string folder)
         {
             token.ThrowIfCancellationRequested();
 
@@ -54,7 +54,7 @@ namespace FastSearchLibrary
             {
                 token.ThrowIfCancellationRequested();
 
-                GetDirectories(d.FullName);
+                SearchDirectories(d.FullName);
             }
 
 

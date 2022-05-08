@@ -32,12 +32,12 @@ namespace FastSearchLibrary
         /// </summary>
         public override void StartSearch()
         {
-             GetFilesFast();
+             SearchFilesFast();
         }
 
 
 
-        protected override void GetFiles(string folder)
+        protected override void SearchFiles(string folder)
         {
             DirectoryInfo dirInfo = null;
             DirectoryInfo[] directories = null;
@@ -74,7 +74,7 @@ namespace FastSearchLibrary
 
             foreach (var d in directories)
             {
-                GetFiles(d.FullName);
+                SearchFiles(d.FullName);
             }
 
             try

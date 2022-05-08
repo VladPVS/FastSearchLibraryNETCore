@@ -9,6 +9,7 @@ namespace FastSearchLibrary
 {
     internal abstract class FileCancellationSearcherBase : FileSearcherBase
     {
+        public override event EventHandler<FileEventArgs> FilesFound;
 
         protected CancellationToken token;
 
@@ -26,7 +27,7 @@ namespace FastSearchLibrary
         {
             try
             {
-                GetFilesFast();
+                SearchFilesFast();
             }
             catch (OperationCanceledException ex)
             {
@@ -54,6 +55,17 @@ namespace FastSearchLibrary
             }            
         }
 
+        protected override void CallFilesFound(List<FileInfo> files)
+        {
+            EventHandler<FileEventArgs> handler = FilesFound;
+
+            if (handler != null)
+            {
+                var arg = new FileEventArgs(files, token);
+                handler(this, arg);
+            }
+        }
+
 
         protected override void OnSearchCompleted(bool isCanceled)
         {
@@ -79,7 +91,7 @@ namespace FastSearchLibrary
         }
 
 
-        protected override void GetFilesFast()
+        protected override void SearchFilesFast()
         {
             List<DirectoryInfo> startDirs = GetStartDirectories(folder);
 
@@ -87,7 +99,7 @@ namespace FastSearchLibrary
             {
                 GetStartDirectories(d.FullName).AsParallel().WithCancellation(token).ForAll((dir) =>
                 {
-                    GetFiles(dir.FullName);
+                    SearchFiles(dir.FullName);
                 });
             });
         }
