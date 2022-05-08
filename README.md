@@ -243,7 +243,7 @@ Task<List<FileInfo>> task = FileSearcher.GetFilesFastAsync(@"D:\", (f) =>
   instead of delegate.   
 
   The difference between these method is represented by next example.
-  They all search in on C:\, D:\ drives .txt files that contain at least one of
+  They all search on C:\ and D:\ drives .txt files that contain at least one of
   the next expression: "first search expression", "second search expression" ignoring text case.  
 
   Example:
