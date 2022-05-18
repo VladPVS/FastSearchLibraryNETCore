@@ -329,7 +329,7 @@ This is example for experiments of `FileTextSearcher` class using:
 ````
 
 It's possible to use regular expressions for search files by content,
-but in practice it will take a lot of time. So if you are use them, try to minimize quantity of files that need to be checked by
+but in practice it will take a lot of time. So if you have to use them, try to minimize quantity of files that need to be checked by
 regular expression. Also this case one cannot expect using of `StopSearch()` method for cancelling operation as it can be performed unpredictable time.
 Therefore, it's better to keep all your lambdas and event handlers as simple as possible.
 
