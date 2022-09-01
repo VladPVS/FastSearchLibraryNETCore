@@ -15,6 +15,8 @@ The multithreading library that provides opportunity both to fast find files or 
 
 [The MIF](https://github.com/VladPVS/The-MIF "The MIF search tool") file search tool is based on this library. You can [try](https://github.com/VladPVS/The-MIF/releases "Download The MIF") it if you want to estimate speed of work right now.
 
+![Downloads](https://img.shields.io/github/downloads/VladPVS/FastSearchLibraryNetCore/total.svg)
+
 ## ADVANTAGES
 * Library uses recursive search algorithm that is splitted on subtasks executing in thread pool
 * **UnauthorizedAccessException** is never thrown while search is executed
