@@ -229,7 +229,7 @@ Task<List<FileInfo>> task = FileSearcher.GetFilesFastAsync(@"D:\", (f) =>
  ````
    ### Text search
    
-  Class `FileTextSearcher` contain static methods that allow to execute search
+  Class `FileTextSearcher` contains static methods that allow to execute search
   of text files by its content using the same multithreading algorithm.
   
   4 overloads of FileTextSearcher.SearchFilesByTextAsync() methods that accept:
@@ -279,7 +279,6 @@ This is example for experiments of `FileTextSearcher` class using:
     object locker = new object();
 
     Stopwatch stopwatch = Stopwatch.StartNew();
-    stopwatch.Start();
 
     var files = new List<FileInfo>();
 
