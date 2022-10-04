@@ -23,7 +23,7 @@ The multithreading library that provides opportunity both to fast find files or 
 * It's possible to choose different search criteria
 * It's possible to stop search process when it is necessary
 * It's possible to set different search paths at the same time
-* **It's possible to search text files by its content**
+* **It's possible to search text files by their content**
 
 ## INSTALLATION
 1. Download archive with last [release](https://github.com/VladPVS/FastSearchLibraryNetCore/releases "Last release")
