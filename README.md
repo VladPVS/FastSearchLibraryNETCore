@@ -9,7 +9,7 @@ We will release our Motherland from russian invaders and save Europe from aggres
 #### Glory to Ukraine!
 
 # FastSearchLibrary (.NET Core)
-The multithreading library that provides opportunity both to fast find files or directories using different search criteria and search text files by its content.
+The multithreading library that provides opportunity both to fast find files or directories using different search criteria and search text files by their content.
 
 .NET Framework version is available [here](https://github.com/VladPVS/FastSearchLibrary ".NET Framework version").
 
