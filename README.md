@@ -26,9 +26,10 @@ The multithreading library that provides opportunity both to fast find files or 
 * **It's possible to search text files by their content**
 
 ## INSTALLATION
+Find `VladPVS.FastSearchLibraryNetCore` package in the Nuget Package Manager or follow next steps:
 1. Download archive with last [release](https://github.com/VladPVS/FastSearchLibraryNetCore/releases "Last release")
-2. Extract content to some directory.
-3. Copy .dll and .xml files in directory of your project.
+2. Extract content to some directory
+3. Copy .dll and .xml files in directory of your project
 4. Add library to your project: Solution Explorer -> Dependencies -> Add Project Reference in context menu -> Browse
 5. Add appropriate namespace: `using FastSearchLibrary;`
 6. Set target framework version at least .NET Core 3.1
