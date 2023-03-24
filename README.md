@@ -131,7 +131,7 @@ Task<List<FileInfo>> task = FileSearcher.GetFilesFastAsync(@"D:\", (f) =>
             searcher = new FileSearcher(@"C:\", (f) =>
             {
                return Regex.IsMatch(f.Name, @".*[iI]magine[\s_-][dD]ragons.*.mp3$"); 
-            }, tokenSource);  // give tokenSource in constructor
+            }, tokenSource);  // pass tokenSource to the constructor
  
 
             searcher.FilesFound += (sender, arg) => // subscribe on FilesFound event
@@ -231,7 +231,7 @@ Task<List<FileInfo>> task = FileSearcher.GetFilesFastAsync(@"D:\", (f) =>
    ### Text search
    
   Class `FileTextSearcher` contains static methods that allow to execute search
-  of text files by its content using the same multithreading algorithm.
+  of text files by their content using the same multithreading algorithm.
   
   4 overloads of FileTextSearcher.SearchFilesByTextAsync() methods that accept:
   * Enumeration of start searching directories
