@@ -233,7 +233,7 @@ Task<List<FileInfo>> task = FileSearcher.GetFilesFastAsync(@"D:\", (f) =>
   Class `FileTextSearcher` contains static methods that allow to execute search
   of text files by their content using the same multithreading algorithm.
   
-  4 overloads of FileTextSearcher.SearchFilesByTextAsync() methods that accept:
+  There are 4 overloads of FileTextSearcher.SearchFilesByTextAsync() methods that accept:
   * Enumeration of start searching directories
   * Either delegate that filters files where is necessary to perform search by content
   or string pattern that can contain a combination of valid literal path 
@@ -241,8 +241,8 @@ Task<List<FileInfo>> task = FileSearcher.GetFilesFastAsync(@"D:\", (f) =>
   * Either delegate that determines whether file content corresponds the searching requirements
   or enumeration of searhing expressions
   * Encoding of text files
-  * Value of StringComparison enum that determines how to compare searching expressions.
-  Applyiable only to those method overloads that accept enumeration of searching expressions
+  * Value of StringComparison enum that determines how to compare search expressions.
+  It's applicable only to those method overloads that accept enumeration of search expressions
   instead of delegate.   
 
   The difference between these method is represented by next example.
