@@ -245,7 +245,7 @@ Task<List<FileInfo>> task = FileSearcher.GetFilesFastAsync(@"D:\", (f) =>
   It's applicable only to those method overloads that accept enumeration of search expressions
   instead of delegate.   
 
-  The difference between these method is represented by next example.
+  The difference between these methods is represented by next example.
   They all search on C:\ and D:\ drives .txt files that contain at least one of
   the next expression: "first search expression", "second search expression" ignoring text case.  
 
