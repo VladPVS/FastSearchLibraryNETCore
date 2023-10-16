@@ -8,6 +8,10 @@ Also you may help Armed Forces of Ukraine here: https://bank.gov.ua/en/news/all/
 We will release our Motherland from Russian invaders and save Europe from aggressive inhuman Russian regime. I promise.
 #### Glory to Ukraine!
 
+___
+
+If you wish to support me personally, it's possible to do here: [https://ko-fi.com/VladPVS](https://ko-fi.com/vladpvs)
+
 # FastSearchLibrary (.NET Core)
 The multithreading library that provides opportunity both to fast find files or directories using different search criteria and search text files by their content.
 
